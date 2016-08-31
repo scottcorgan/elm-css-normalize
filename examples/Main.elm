@@ -2,6 +2,8 @@ module Examples.Main exposing (..)
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
+import Svg
+import Svg.Attributes
 import Html.App
 import Html.CssHelpers
 import Css.File
@@ -282,6 +284,95 @@ p q r s t u v w x y z { | } ~
                             , time [ datetime "2013-04-06T12:32+00:00" ] [ text "2 weeks ago" ]
                             ]
                         ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                ]
+            , section [ id "embedded" ]
+                [ header [] [ h1 [] [ text "Embedded content" ] ]
+                , article [ id "embedded__images" ]
+                    [ header [] [ h2 [] [ text "Images" ] ]
+                    , div []
+                        [ h3 []
+                            [ text "No "
+                            , code [] [ text "<figure>" ]
+                            , text " element"
+                            ]
+                        , p [] [ img [ src "http://placekitten.com/480/480", alt "Image alt text" ] [] ]
+                        , h3 []
+                            [ text "wrapped in a "
+                            , code [] [ text "<figure>" ]
+                            , text " element, no "
+                            , code [] [ text "<figcaption>" ]
+                            ]
+                        , figure []
+                            [ img [ src "http://placekitten.com/420/420", alt "Image alt text" ] []
+                            ]
+                        , h3 []
+                            [ text "Wrapped in a "
+                            , code [] [ text "<figure>" ]
+                            , text " element, with a "
+                            , code [] [ text "<figcaption>" ]
+                            ]
+                        , figure []
+                            [ img [ src "http://placekitten.com/420/420", alt "Image alt text" ] []
+                            , figcaption [] [ text "Here is a caption for this image." ]
+                            ]
+                        ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__audio" ]
+                    [ header [] [ h2 [] [ text "Audio" ] ]
+                    , div [] [ audio [ controls True ] [] ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__video" ]
+                    [ header [] [ h2 [] [ text "Video" ] ]
+                    , div [] [ video [ controls True ] [] ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__canvas" ]
+                    [ header [] [ h2 [] [ text "Canvas" ] ]
+                    , div [] [ canvas [] [ text "canvas" ] ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__meter" ]
+                    [ header [] [ h2 [] [ text "Meter" ] ]
+                    , div []
+                        [ meter
+                            [ value "2"
+                            , Html.Attributes.min "0"
+                            , Html.Attributes.max "10"
+                            ]
+                            [ text "2 out of 10" ]
+                        ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                ,  article [ id "embedded__progress" ]
+                    [ header [] [ h2 [] [ text "Progress" ] ]
+                    , div [] [ progress [] [ text "progress" ] ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__svg" ]
+                    [ header [] [ h2 [] [ text "Inline SVG" ] ]
+                    , div []
+                        [ Svg.svg
+                            [ Svg.Attributes.width "100px"
+                            , Svg.Attributes.height "100px"
+                            ]
+                            [ Svg.circle
+                                [ Svg.Attributes.cx "100"
+                                , Svg.Attributes.cy "100"
+                                , Svg.Attributes.r "100"
+                                , Svg.Attributes.fill "#1fa3ec"
+                                ]
+                                []
+                            ]
+                        ]
+                    , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
+                    ]
+                , article [ id "embedded__iframe" ]
+                    [ header [] [ h2 [] [ text "IFrame" ] ]
+                    , div [] [ iframe [ src "index.html", height 300 ] [] ]
                     , footer [] [ p [] [ a [ href "#top" ] [ text "[Top]" ] ] ]
                     ]
                 ]
