@@ -2,7 +2,7 @@
     "version": "1.0.0",
     "summary": "A port of normalize.css for elm-css",
     "repository": "https://github.com/scottcorgan/elm-css-normalize.git",
-    "license": "BSD3",
+    "license": "MIT",
     "source-directories": [
         "./src"
     ],
