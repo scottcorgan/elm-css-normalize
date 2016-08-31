@@ -85,7 +85,7 @@ generator a stylesheet with the [elm-css preprocessor](https://www.npmjs.com/pac
 
     css : Css.Stylesheet
     css =
-        (Css.stylesheet << namespace "my-styels")
+        (Css.stylesheet << namespace "my-styels") <|
             List.append
                 Css.Normalize.snippets
                 [ everything
