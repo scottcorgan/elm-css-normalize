@@ -1,0 +1,9 @@
+{
+  "name": "elm-css-normalize",
+  "version": "1.0.0",
+  "description": "A port of normalize.css for elm-css",
+  "author": "Scott Corgan",
+  "devDependencies": {
+    "elm": "0.17.1"
+  }
+}
