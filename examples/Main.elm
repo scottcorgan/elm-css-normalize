@@ -466,7 +466,168 @@ p q r s t u v w x y z { | } ~
                         ]
                     ]
                 , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
-                -- start forms__radio here
+                , fieldset [ id "forms__radio" ]
+                    [ legend [] [ text "Radio Buttons" ]
+                    , ul []
+                        [ li []
+                            [ label [ for "radio1" ]
+                                [ input
+                                    [ id "radio1"
+                                    , name "radio"
+                                    , type' "radio"
+                                    , checked True
+                                    ]
+                                    []
+                                , text "Option 1"
+                                ]
+                            ]
+                        , li []
+                            [ label [ for "radio2" ]
+                                [ input
+                                    [ id "radio2"
+                                    , name "radio"
+                                    , type' "radio"
+                                    ]
+                                    []
+                                , text "Option 2"
+                                ]
+                            ]
+                        , li []
+                            [ label [ for "radio3" ]
+                                [ input
+                                    [ id "radio1"
+                                    , name "radio"
+                                    , type' "radio"
+                                    ]
+                                    []
+                                , text "Option 3"
+                                ]
+                            ]
+                        ]
+                    ]
+                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+                , fieldset [ id "formst__textareas" ]
+                    [ legend [] [ text "Textareas" ]
+                    , p []
+                        [ label [ for "textarea" ] [ text "Textarea" ]
+                        , textarea
+                            [ id "textarea"
+                            , rows 8
+                            , cols 48
+                            , placeholder "Enter your message here"
+                            ]
+                            []
+                        ]
+                    ]
+                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+                , fieldset [ id "forms__html5" ]
+                    [ legend [] [ text "HTML5 inputs"]
+                    , p []
+                        [ label [ for "ic" ] [ text "Color input" ]
+                        , input
+                            [ type' "color"
+                            , id "ic"
+                            , value "#000000"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "in" ] [ text "Number input" ]
+                        , input
+                            [ type' "number"
+                            , id "in"
+                            , Html.Attributes.min "0"
+                            , Html.Attributes.max "10"
+                            , value "5"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "ir" ] [ text "Range input" ]
+                        , input
+                            [ type' "range"
+                            , id "ir"
+                            , value "10"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "idd" ] [ text "Date input" ]
+                        , input
+                            [ type' "date"
+                            , id "idd"
+                            , value "1970-01-01"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "idm" ] [ text "Month input" ]
+                        , input
+                            [ type' "month"
+                            , id "idm"
+                            , value "1970-01"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "idw" ] [ text "Week input" ]
+                        , input
+                            [ type' "week"
+                            , id "idw"
+                            , value "1970-W01"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "idt" ] [ text "Datetime input" ]
+                        , input
+                            [ type' "datetime"
+                            , id "idt"
+                            , value "1970-01-01T00:00:00Z"
+                            ]
+                            []
+                        ]
+                    , p []
+                        [ label [ for "idtl" ] [ text "Datetime-local input" ]
+                        , input
+                            [ type' "datetime-local"
+                            , id "idtl"
+                            , value "1970-01-01T00:00"
+                            ]
+                            []
+                        ]
+                    ]
+                ]
+                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+                , fieldset [ id "forms__action" ]
+                    [ legend [] [ text "Action buttons" ]
+                    , p []
+                        [ input [ type' "submit", value "<input type=submit>" ] []
+                        , input [ type' "button", value "<input type=button>" ] []
+                        , input [ type' "reset", value "<input type=reset>" ] []
+                        , input [ type' "submit", value "<input disabled>", disabled True ] []
+                        ]
+                    , p []
+                        [ button [ type' "submit" ] [ text "<button type=submit>" ]
+                        , button [ type' "button" ] [ text "<button type=button>" ]
+                        , button [ type' "reset" ] [ text "<button type=reset>" ]
+                        , button [ type' "button", disabled True ] [ text "<button disabled>" ]
+                        ]
+                    ]
+                , p [] [ a [ href "#top" ] [ text "[Top]" ] ]
+            ]
+        , footer []
+            [ p []
+                [ text "Ported from "
+                , a
+                    [ href "https://github.com/necolas/normalize.css/blob/master/test.html"
+                    , target "_blank"
+                    ]
+                    [ text "normalize.css test page." ]
+                ]
+            , p []
+                [ text "Shout out to "
+                , a [ href "http://twitter.com/cbracco", target "_blank" ] [ text "@cbracco" ]
                 ]
             ]
         ]
