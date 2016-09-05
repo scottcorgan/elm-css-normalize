@@ -14,7 +14,6 @@ Compile it with your elm-css code to have easier cross-browser styling experienc
 
 import Css exposing (..)
 import Css.Elements exposing (..)
-import Css.Namespace exposing (namespace)
 
 
 {-| A [Stylesheet](https://github.com/rtfeldman/elm-css/blob/master/Tutorial.md) to rest values to make them more consistent across most browsers. You can
@@ -69,7 +68,7 @@ include this stylesheet in your elm-css compilation file.
 -}
 css : Stylesheet
 css =
-    (Css.stylesheet << namespace "") snippets
+    Css.stylesheet snippets
 
 
 {-| The snippets used to generate the normalizing stylesheet. Use this if you want to append
@@ -85,7 +84,7 @@ generator a stylesheet with the [elm-css preprocessor](https://www.npmjs.com/pac
 
     css : Css.Stylesheet
     css =
-        (Css.stylesheet << namespace "my-styels") <|
+        (Css.stylesheet << namespace "my-styles") <|
             List.append
                 Css.Normalize.snippets
                 [ everything
