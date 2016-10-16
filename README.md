@@ -16,9 +16,11 @@ Build a CSS file by running:
 
 Build an example HTML file with inline CSS by running:
 
-`elm make examples/Main.elm`
+`elm package install scottcorgan/elm-html-template && elm make examples/Main.elm`
 
 Or using the reactor:
 
-`elm reactor` then navigate to examples/Main.elm
+`elm package install scottcorgan/elm-html-template && elm reactor` then navigate to examples/Main.elm
+
+Note that github.com/scottcorgan/elm-html-template is required for development/testing and has to be manually added.
 
