@@ -3,24 +3,21 @@
 A port of normalize.css for elm-css.
 
 
-## Usage
+## Documentation
 
-Import the `Css.Normalize` module in your Stylesheets.elm file (or where you are building your elm-css) and include `Css.Normalize.css` in your list of CSS. See the examples folder for two uses; as inline styles and as .css file.
+See the package documentation at: http://package.elm-lang.org/packages/scottcorgan/elm-css-normalize/latest/Css-Normalize
 
 
 ## Development/Testing
 
 Build a CSS file by running:
 
-`elm-css examples/Stylesheets.elm`
+`cd examples && elm-css Stylesheets.elm`
 
 Build an example HTML file with inline CSS by running:
 
-`elm package install scottcorgan/elm-html-template && elm make examples/Main.elm`
+`cd examples && elm package install && elm make Main.elm`
 
 Or using the reactor:
 
-`elm package install scottcorgan/elm-html-template && elm reactor` then navigate to examples/Main.elm
-
-Note that github.com/scottcorgan/elm-html-template is required for development/testing and has to be manually added.
-
+`cd examples && elm package install && elm reactor` then click Main.elm in the browser.
