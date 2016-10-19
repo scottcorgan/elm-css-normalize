@@ -1,4 +1,4 @@
-module Examples.Main exposing (..)
+module Main exposing (..)
 
 import Html exposing (..)
 import Html.Template
@@ -19,7 +19,7 @@ main =
 
 compiledCss : String
 compiledCss =
-    [ Css.Normalize.css ]
+    Css.Normalize.css
         |> Css.File.compile
         |> .css
 
