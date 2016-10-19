@@ -19,7 +19,7 @@ main =
 
 compiledCss : String
 compiledCss =
-    Css.Normalize.css
+    [ Css.Normalize.css ]
         |> Css.File.compile
         |> .css
 
