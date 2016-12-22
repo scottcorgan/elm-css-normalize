@@ -8,7 +8,7 @@ import Css.File
 import Css.Normalize
 
 
-main : Program Never
+main : Program Never ()
 main =
     Html.App.beginnerProgram
         { model = {}

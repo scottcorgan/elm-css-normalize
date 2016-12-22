@@ -11,7 +11,6 @@ Compile it with your elm-css code to have easier cross-browser styling experienc
 
 -}
 
-
 import Css exposing (..)
 import Css.Elements exposing (..)
 
@@ -95,12 +94,12 @@ snippets : List Snippet
 snippets =
     [ html
         [ fontFamilies [ "sans-serif" ]
-        , property "line-height" "1.15" -- lineHeight doesn't accept floats
+        , lineHeight (num 1.15)
         , property "-ms-text-size-adjust" "100%"
         , property "-webkit-text-size-adjust" "100%"
         ]
     , body [ margin zero ]
-    , each [ article, (selector "aside") , footer, header, nav, section ]
+    , each [ article, (selector "aside"), footer, header, nav, section ]
         [ display block ]
     , h1
         [ fontSize (em 2)
@@ -120,15 +119,12 @@ snippets =
     , a
         [ backgroundColor transparent
         , property "-webkit-text-decoration-skip" "objects"
-        , active
-            [ property "outline-width" "0"
-            ]
-        , hover
-            [ property "outline-width" "0"
-            ]
+        , active [ outlineWidth zero ]
+        , hover [ outlineWidth zero ]
         ]
     , selector "abbr[title]"
-        [ property "border-bottom" "none" -- borderBottom doesn't accept none
+        [ property "border-bottom" "none"
+          -- borderBottom doesn't accept none
         , textDecoration underline
         , textDecoration2 underline dotted
         ]
@@ -161,7 +157,7 @@ snippets =
     , each [ button, input, optgroup, select, selector "textarea" ]
         [ fontFamilies [ "sans-serif" ]
         , fontSize (pct 100)
-        , property "line-height" "1.15" -- lineHeight doesn't allow floats
+        , lineHeight (num 1.15)
         , margin zero
         ]
     , each [ button, input ] [ overflow visible ]
@@ -196,7 +192,7 @@ snippets =
         ]
     , legend
         [ boxSizing borderBox
-        , property "color" "inherit"
+        , color inherit
         , property "display" "table"
         , maxWidth (pct 100)
         , padding zero
@@ -221,7 +217,7 @@ snippets =
         [ height auto ]
     , selector "[type=\"search\"]"
         [ property "-webkit-appearance" "textfield"
-        , property "outline-offset" "-2px"
+        , outlineOffset (px -2)
         ]
     , each
         [ selector "[type=\"search\"]::-webkit-search-cancel-button"

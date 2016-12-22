@@ -2,8 +2,6 @@ port module Stylesheets exposing (..)
 
 import Css.File exposing (..)
 import Html exposing (div)
-import Html.App as Html
-
 import Css.Normalize
 
 
@@ -15,7 +13,7 @@ cssFiles =
     toFileStructure [ ( "normalize.css", compile [ Css.Normalize.css ] ) ]
 
 
-main : Program Never
+main : Program Never () msg
 main =
     Html.program
         { init = ( (), files cssFiles )
