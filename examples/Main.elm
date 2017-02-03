@@ -2,15 +2,14 @@ module Main exposing (..)
 
 import Html exposing (..)
 import Html.Template
-import Html.App
 import Html.CssHelpers
 import Css.File
 import Css.Normalize
 
 
-main : Program Never ()
+main : Program Never {} b
 main =
-    Html.App.beginnerProgram
+    Html.beginnerProgram
         { model = {}
         , update = (\_ _ -> {})
         , view = view
@@ -19,7 +18,7 @@ main =
 
 compiledCss : String
 compiledCss =
-    Css.Normalize.css
+    [ Css.Normalize.css ]
         |> Css.File.compile
         |> .css
 
