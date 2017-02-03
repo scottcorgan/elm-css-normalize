@@ -129,6 +129,7 @@ snippets =
         , textDecoration2 underline dotted
         ]
     , each [ selector "b", strong ] [ fontWeight inherit ]
+    , each [ selector "b", strong ] [ fontWeight bolder ]
     , each [ code, selector "kbd", selector "samp" ]
         [ fontFamilies [ "monospace", "monospace" ]
         , fontSize (em 1)
