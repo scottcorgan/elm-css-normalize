@@ -102,11 +102,11 @@ snippets =
     , each [ article, (selector "aside"), footer, header, nav, section ]
         [ display block ]
     , h1
-        [ fontSize (em 2)
-        , margin2 (em 0.67) zero
+        [ fontSize (Css.em 2)
+        , margin2 (Css.em 0.67) zero
         ]
     , selector "figcaption figure, main" [ display block ]
-    , selector "figure" [ margin2 (em 1) (px 40) ]
+    , selector "figure" [ margin2 (Css.em 1) (px 40) ]
     , hr
         [ boxSizing contentBox
         , height zero
@@ -114,7 +114,7 @@ snippets =
         ]
     , pre
         [ fontFamilies [ "monospace", "monospace" ]
-        , fontSize (em 1)
+        , fontSize (Css.em 1)
         ]
     , a
         [ backgroundColor transparent
@@ -132,7 +132,7 @@ snippets =
     , each [ selector "b", strong ] [ fontWeight bolder ]
     , each [ code, selector "kbd", selector "samp" ]
         [ fontFamilies [ "monospace", "monospace" ]
-        , fontSize (em 1)
+        , fontSize (Css.em 1)
         ]
     , selector "dfn" [ fontStyle italic ]
     , selector "mark"
@@ -146,8 +146,8 @@ snippets =
         , position relative
         , verticalAlign baseline
         ]
-    , selector "sub" [ bottom (em -0.25) ]
-    , selector "sup" [ top (em -0.5) ]
+    , selector "sub" [ bottom (Css.em -0.25) ]
+    , selector "sup" [ top (Css.em -0.5) ]
     , each [ audio, video ] [ display inlineBlock ]
     , selector "audio:not([controls])"
         [ display none
@@ -189,7 +189,7 @@ snippets =
     , fieldset
         [ border3 (px 1) solid (hex "c0c0c0")
         , margin2 zero (px 2)
-        , padding3 (em 0.35) (em 0.625) (em 0.75)
+        , padding3 (Css.em 0.35) (Css.em 0.625) (Css.em 0.75)
         ]
     , legend
         [ boxSizing borderBox
