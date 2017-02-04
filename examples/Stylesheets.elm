@@ -13,11 +13,6 @@ cssFiles =
     toFileStructure [ ( "normalize.css", compile [ Css.Normalize.css ] ) ]
 
 
-main : Program Never () msg
+main : CssCompilerProgram
 main =
-    Html.program
-        { init = ( (), files cssFiles )
-        , view = \_ -> (div [] [])
-        , update = \_ _ -> ( (), Cmd.none )
-        , subscriptions = \_ -> Sub.none
-        }
+    Css.File.compiler files cssFiles
