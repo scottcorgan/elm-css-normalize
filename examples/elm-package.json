@@ -1,5 +1,5 @@
 {
-    "version": "1.1.3",
+    "version": "1.1.4",
     "summary": "Examples for the port of normalize.css for elm-css",
     "repository": "https://github.com/scottcorgan/elm-css-normalize.git",
     "license": "MIT",
@@ -9,10 +9,10 @@
     ],
     "exposed-modules": [],
     "dependencies": {
-        "elm-lang/core": "5.0.0 <= v < 6.0.0",
+        "elm-lang/core": "5.1.1 <= v < 6.0.0",
         "elm-lang/html": "2.0.0 <= v < 3.0.0",
-        "rtfeldman/elm-css": "8.0.0 <= v < 9.0.0",
-        "rtfeldman/elm-css-helpers": "2.0.1 <= v < 3.0.0",
+        "rtfeldman/elm-css": "9.0.0 <= v < 10.0.0",
+        "rtfeldman/elm-css-helpers": "2.1.0 <= v < 3.0.0",
         "scottcorgan/elm-html-template": "1.0.1 <= v < 2.0.0"
     },
     "elm-version": "0.18.0 <= v < 0.19.0"
