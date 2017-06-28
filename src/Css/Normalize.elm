@@ -321,8 +321,8 @@ snippets =
 
     -- Correct the cursor style of increment and decrement buttons in Chrome.
     , Css.each
-        [ Css.Elements.typeSelector "[type=\"Css.number\"]::-webkit-inner-spin-button"
-        , Css.Elements.typeSelector "[type=\"Css.number\"]::-webkit-outer-spin-button"
+        [ Css.Elements.typeSelector "[type=\"number\"]::-webkit-inner-spin-button"
+        , Css.Elements.typeSelector "[type=\"number\"]::-webkit-outer-spin-button"
         ]
         [ Css.height Css.auto ]
 
