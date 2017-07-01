@@ -1,8 +1,5 @@
 node_modules
 elm-stuff
 examples/elm-stuff
-examples/index.html
+examples/normalize.css
 tests/node_modules
-tests/elm-stuff
-tests/css/
-tests/normalize.css

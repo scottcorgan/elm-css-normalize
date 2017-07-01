@@ -1,7 +1,8 @@
 {
-  "name": "elm-css-normalize-test",
-  "description": "Compare the generated and the original CSS files.",
-  "version": "0.0.0",
+  "description": "Compare the generated and the original normalize.css files.",
+  "version": "0.1.0",
+  "repository": "https://github.com/scottcorgan/elm-css-normalize.git",
+  "license": "MIT",
   "dependencies": {
     "clean-css": "^4.1.4",
     "clean-css-cli": "^4.1.5"
