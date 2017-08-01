@@ -30,5 +30,6 @@ view =
 -- MAIN
 
 
+main : Html msg
 main =
     view
