@@ -1,7 +1,6 @@
 port module Stylesheets exposing (..)
 
-import Css.File exposing (..)
-import Html exposing (div)
+import Css.File exposing (CssCompilerProgram, CssFileStructure, compile, toFileStructure)
 import Css.Normalize
 
 

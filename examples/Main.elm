@@ -1,19 +1,10 @@
 module Main exposing (..)
 
-import Html exposing (..)
-import Html.Template
-import Html.CssHelpers
-import Css.File
+import Css.File exposing (compile)
 import Css.Normalize
-
-
-main : Program Never {} b
-main =
-    Html.beginnerProgram
-        { model = {}
-        , update = (\_ _ -> {})
-        , view = view
-        }
+import Html exposing (Html, div)
+import Html.CssHelpers exposing (style)
+import Html.Template exposing (view)
 
 
 compiledCss : String
@@ -23,9 +14,21 @@ compiledCss =
         |> .css
 
 
-view : a -> Html.Html b
-view model =
-    div []
+
+-- VIEW
+
+
+view : Html.Html msg
+view =
+    Html.div []
         [ Html.CssHelpers.style compiledCss
         , Html.Template.view
         ]
+
+
+
+-- MAIN
+
+
+main =
+    view
