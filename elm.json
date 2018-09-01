@@ -1,0 +1,17 @@
+{
+    "type": "package",
+    "name": "scottcorgan/elm-css-normalize",
+    "summary": "A port of normalize.css for elm-css",
+    "license": "MIT",
+    "version": "2.0.0",
+    "exposed-modules": [
+        "Css.Normalize"
+    ],
+    "elm-version": "0.19.0 <= v < 0.20.0",
+    "dependencies": {
+        "elm/core": "1.0.0 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
+        "rtfeldman/elm-css": "15.1.0 <= v < 16.0.0"
+    },
+    "test-dependencies": {}
+}
